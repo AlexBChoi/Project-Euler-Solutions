@@ -6,8 +6,7 @@ import java.util.ArrayList;
 public class Problem3 {
     public static void main(String[] args) {
         final long VALUE = 600851475143L;
-        long x = 13195;
-        largestPrimeFactor(x);
+        largestPrimeFactor(VALUE);
     }
 
     public static void largestPrimeFactor(long iVALUE) {
@@ -16,10 +15,8 @@ public class Problem3 {
 
         //Finds prime factors, not prime number list
         for(long i=2L; i<Math.sqrt(iVALUE); i++) { //largest prime factor is less than square root of value
-           if(iVALUE%i==0) { //if there is no remainder it is a factor? divide value by each number and if remainder is zero multiply it
-               System.out.println("This is a prime number:" + i);
+           if(iVALUE%i==0) { //searches for factors that has zero remainder
                if(result!=iVALUE) { //while result does not equal the value keep multiplying factors
-                   System.out.println("This is prime number2:" + i);
                    result *= i;
                    factors.add(i);
                }
