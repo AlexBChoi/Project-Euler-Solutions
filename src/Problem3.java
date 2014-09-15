@@ -10,7 +10,7 @@ public class Problem3 {
     }
 
     public static void largestPrimeFactor(long iVALUE) {
-        ArrayList factors = new ArrayList();
+        ArrayList<Long> factors = new ArrayList<Long>();
         long result = 1L;
 
         //Finds prime factors, not prime number list
